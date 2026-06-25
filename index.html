@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTEM360 — Continuous Threat Exposure Management Platform</title>
+  <meta name="description" content="CTEM360 is an AI-powered cybersecurity platform that unifies vulnerability management, threat intelligence, cloud attack surface management, and compliance into a single pane of glass." />
+  <meta name="keywords" content="CTEM, vulnerability management, threat intelligence, cloud security, attack surface management, compliance, cybersecurity platform" />
+  <meta name="author" content="CTEM360" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CTEM360 — See Every Threat. Stop Every Attack." />
+  <meta property="og:description" content="AI-powered continuous threat exposure management. Unify vulnerability scanning, threat intelligence, cloud ASM, and compliance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/dashboard_preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%230a0e27'/><text x='50' y='62' text-anchor='middle' font-size='42' font-weight='bold' fill='%2300d4ff'>C</text></svg>" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       NAVIGATION
+       ================================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span>CTEM<span class="logo-accent">360</span></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#cta" class="nav-cta">Request Demo</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================================
+       HERO SECTION
+       ================================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb--cyan"></div>
+      <div class="hero-orb hero-orb--violet"></div>
+      <div class="hero-orb hero-orb--teal"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Continuous Threat Exposure Management
+        </div>
+
+        <h1>
+          See Every Threat.
+          <span class="line-break gradient-text">Stop Every Attack.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Unify vulnerability scanning, AI-powered analysis, cloud attack surface management, and compliance — all in one platform built for modern security teams.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-primary">
+            Request a Demo
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            Explore Features
+            <span class="btn-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating cards on the right -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-float-card card-1">
+        <div class="float-card-label">Critical Vulnerabilities</div>
+        <div class="float-card-value text-cyan">2,847</div>
+        <div class="float-card-bar">
+          <span style="background: #ef4444; flex: 2;"></span>
+          <span style="background: #f59e0b; flex: 3;"></span>
+          <span style="background: #10b981; flex: 5;"></span>
+        </div>
+      </div>
+
+      <div class="hero-float-card card-2">
+        <div class="float-card-label">Threat Score</div>
+        <div class="float-card-value text-green">94.2% Safe</div>
+        <div class="float-card-bar">
+          <span style="background: #10b981; flex: 9;"></span>
+          <span style="background: #f59e0b; flex: 1;"></span>
+        </div>
+      </div>
+
+      <div class="hero-float-card card-3">
+        <div class="float-card-label">Compliance Status</div>
+        <div class="float-card-value text-violet">ISO 27001 ✓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       STATS BAR
+       ================================================================ -->
+  <section class="stats-bar" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="20" data-suffix="+">0</div>
+          <div class="stat-label">Scanner Integrations</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="1000000" data-suffix="+">0</div>
+          <div class="stat-label">Findings Processed</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="10" data-suffix="+">0</div>
+          <div class="stat-label">Compliance Frameworks</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="3" data-suffix="">0</div>
+          <div class="stat-label">Cloud Providers Supported</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FEATURES SECTION
+       ================================================================ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header reveal">
+        <span class="section-badge">✦ Core Capabilities</span>
+        <h2 class="section-title">Everything You Need to<br /><span class="gradient-text">Manage Threat Exposure</span></h2>
+        <p class="section-subtitle mx-auto">Six powerful modules working together to give your security team complete visibility, intelligent prioritization, and actionable remediation.</p>
+      </div>
+
+      <div class="features-grid stagger-children">
+        <!-- Feature 1: Vulnerability Management -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Vulnerability Management</h3>
+          <p>Ingest findings from 20+ security scanners with smart deduplication and unified severity normalization across all your tools.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Trivy</span>
+            <span class="feature-tag">Snyk</span>
+            <span class="feature-tag">SonarQube</span>
+            <span class="feature-tag">Semgrep</span>
+            <span class="feature-tag">ZAP</span>
+            <span class="feature-tag">Nessus</span>
+          </div>
+        </div>
+
+        <!-- Feature 2: AI-Powered Analysis -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>AI-Powered Analysis</h3>
+          <p>RAG-based enrichment with vector embeddings for intelligent deduplication, contextual risk scoring, and automated remediation guidance.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">RAG</span>
+            <span class="feature-tag">Embeddings</span>
+            <span class="feature-tag">Risk Scoring</span>
+            <span class="feature-tag">Auto-Remediation</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: Cloud ASM -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><path d="m13 14-2 2 2 2"/><path d="m17 14-2 2 2 2"/></svg>
+          </div>
+          <h3>Cloud Attack Surface</h3>
+          <p>Multi-cloud asset discovery across Azure, AWS, and GCP. Visualize attack paths through your infrastructure with graph-based analysis.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Azure</span>
+            <span class="feature-tag">AWS</span>
+            <span class="feature-tag">GCP</span>
+            <span class="feature-tag">Neo4j Graphs</span>
+          </div>
+        </div>
+
+        <!-- Feature 4: Threat Intelligence -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <h3>Threat Intelligence</h3>
+          <p>Real-time CVE and EPSS enrichment, IoC lookups, abuse.ch feed integration, and automated threat correlation with your findings.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">CVE/EPSS</span>
+            <span class="feature-tag">IoC Lookups</span>
+            <span class="feature-tag">abuse.ch</span>
+            <span class="feature-tag">Auto-Correlate</span>
+          </div>
+        </div>
+
+        <!-- Feature 5: Living Threat Model -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="6" rx="1"/><rect x="16" y="3" width="6" height="6" rx="1"/><rect x="9" y="15" width="6" height="6" rx="1"/><path d="M5 9v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/><path d="M12 13v2"/></svg>
+          </div>
+          <h3>Living Threat Model</h3>
+          <p>Visual architecture diagrams that auto-update with real findings. Threats move from theoretical to confirmed as scans validate them.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">STRIDE</span>
+            <span class="feature-tag">Auto-Link</span>
+            <span class="feature-tag">ReactFlow</span>
+            <span class="feature-tag">Real-Time</span>
+          </div>
+        </div>
+
+        <!-- Feature 6: Compliance -->
+        <div class="feature-card reveal">
+          <div class="feature-icon feature-icon--orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
+          </div>
+          <h3>Compliance & Policy</h3>
+          <p>Manage policies, collect evidence, and run audit workflows. Includes interactive Security Awareness Games and Cyber Threats Escape Training to build a security-first culture across your organization.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">ISO 27001</span>
+            <span class="feature-tag">SOC 2</span>
+            <span class="feature-tag">Security Games</span>
+            <span class="feature-tag">Escape Training</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       HOW IT WORKS
+       ================================================================ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="features-header reveal">
+        <span class="section-badge">⚡ Workflow</span>
+        <h2 class="section-title text-center">From Scan to <span class="gradient-text">Remediation in Minutes</span></h2>
+        <p class="section-subtitle mx-auto text-center">CTEM360 automates the full lifecycle — from connecting your tools to delivering prioritized, actionable remediation steps.</p>
+      </div>
+
+      <div class="steps-grid stagger-children">
+        <!-- Step 1 -->
+        <div class="step-item reveal">
+          <div class="step-number">
+            <div class="step-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+          </div>
+          <div class="step-label">Step 01</div>
+          <h3>Connect</h3>
+          <p>Integrate your security scanners, cloud accounts, and CI/CD pipelines in minutes with pre-built connectors.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-item reveal">
+          <div class="step-number">
+            <div class="step-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+            </div>
+          </div>
+          <div class="step-label">Step 02</div>
+          <h3>Discover</h3>
+          <p>Auto-discover assets, endpoints, and cloud resources. Map your complete attack surface across all environments.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-item reveal">
+          <div class="step-number">
+            <div class="step-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="step-label">Step 03</div>
+          <h3>Analyze</h3>
+          <p>AI deduplicates, correlates, and prioritizes findings. Get risk scores enriched with EPSS, CVE, and threat intelligence data.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-item reveal">
+          <div class="step-number">
+            <div class="step-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+          </div>
+          <div class="step-label">Step 04</div>
+          <h3>Remediate</h3>
+          <p>Receive actionable remediation guidance, create Jira tickets, and track fixes — closing the loop from finding to resolution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PLATFORM PREVIEW
+       ================================================================ -->
+  <section class="platform-preview" id="platform-preview">
+    <div class="container">
+      <div class="features-header reveal">
+        <span class="section-badge">🖥️ Platform</span>
+        <h2 class="section-title text-center">A Unified <span class="gradient-text">Command Center</span></h2>
+        <p class="section-subtitle mx-auto text-center">One dashboard to rule them all. CTEM360 consolidates findings, assets, threats, and compliance status into a single, intuitive interface.</p>
+      </div>
+
+      <div class="preview-wrapper reveal-scale">
+        <div class="preview-chrome">
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="url-bar">https://app.ctem360.io/dashboard</div>
+        </div>
+        <img
+          src="assets/dashboard_preview.png"
+          alt="CTEM360 Dashboard showing vulnerability analytics, threat trends, and compliance status"
+          class="preview-image"
+          loading="lazy"
+        />
+        <div class="preview-labels"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       INTEGRATIONS
+       ================================================================ -->
+  <section class="integrations" id="integrations">
+    <div class="container">
+      <div class="integrations-header reveal">
+        <span class="section-badge">🔌 Ecosystem</span>
+        <h2 class="section-title">Works With Your <span class="gradient-text">Existing Tools</span></h2>
+        <p class="section-subtitle mx-auto">CTEM360 integrates with 20+ security scanners, cloud providers, and collaboration tools — no rip-and-replace needed.</p>
+      </div>
+
+      <div class="integrations-grid reveal">
+        <!-- SAST/DAST -->
+        <div class="integration-chip"><span class="chip-dot chip-dot--cyan"></span>Trivy</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--violet"></span>Snyk</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--green"></span>SonarQube</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--orange"></span>Semgrep</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--red"></span>OWASP ZAP</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--teal"></span>Nessus</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--blue"></span>Burp Suite</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--violet"></span>Nuclei</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--cyan"></span>Checkov</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--green"></span>Prowler</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--orange"></span>ScoutSuite</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--red"></span>DefectDojo</div>
+        <!-- Cloud -->
+        <div class="integration-chip"><span class="chip-dot chip-dot--blue"></span>Microsoft Azure</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--orange"></span>Amazon AWS</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--red"></span>Google Cloud</div>
+        <!-- Collaboration -->
+        <div class="integration-chip"><span class="chip-dot chip-dot--blue"></span>Jira</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--violet"></span>Slack</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--cyan"></span>GitHub</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--orange"></span>GitLab</div>
+        <div class="integration-chip"><span class="chip-dot chip-dot--teal"></span>Teams</div>
+      </div>
+
+      <p class="integrations-note reveal">
+        Don't see your tool? <strong>Custom integrations</strong> are available via our REST API and webhooks.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PRICING
+       ================================================================ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-header reveal">
+        <span class="section-badge">💎 Plans</span>
+        <h2 class="section-title text-center">Flexible Plans <span class="gradient-text">Coming Soon</span></h2>
+        <p class="section-subtitle mx-auto text-center">We're crafting the perfect plans for security teams of every size. Get in touch to discuss your needs.</p>
+      </div>
+
+      <div class="pricing-coming-soon reveal">
+        <div class="coming-soon-badge">🚀 Coming Soon</div>
+        <h3>Pricing Under Development</h3>
+        <p>We're finalizing our plans to bring you the best value in continuous threat exposure management. Request a demo to discuss your requirements and get early-access pricing.</p>
+        <a href="#cta" class="btn btn-primary">
+          Request a Demo
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TESTIMONIALS
+       ================================================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <span class="section-badge">💬 Testimonials</span>
+        <h2 class="section-title text-center">Trusted by <span class="gradient-text">Security Leaders</span></h2>
+      </div>
+
+      <div class="testimonials-carousel reveal">
+        <div class="testimonial-track">
+          <div class="testimonial-slides">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-quote">"CTEM360 replaced three separate tools for us. Having vulnerability data, threat intel, and compliance in one platform cut our triage time by 60%. The AI deduplication alone saved us hundreds of hours per quarter."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-role-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Verified Security Professional
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-quote">"The Living Threat Model is a game-changer. We can finally see our architecture and real findings on the same diagram. When a scan finds a new SQL injection, it lights up the affected component instantly."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-role-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Verified Enterprise Customer
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-quote">"We went from spending 2 weeks preparing for ISO 27001 audits to having everything ready in real-time. The compliance module with automated evidence collection is exactly what we needed."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-role-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Verified Compliance Leader
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots">
+          <button class="testimonial-dot active" aria-label="Testimonial 1"></button>
+          <button class="testimonial-dot" aria-label="Testimonial 2"></button>
+          <button class="testimonial-dot" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA SECTION
+       ================================================================ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-inner reveal-scale">
+        <div class="cta-text">
+          <h2>Request a <span class="gradient-text">Demo</span></h2>
+          <p>See CTEM360 in action. Fill out the form and our team will reach out to schedule a personalized walkthrough.</p>
+          <div class="cta-trust-signals">
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              No credit card required
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              30-minute personalized demo
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+              Talk to a security expert
+            </div>
+          </div>
+        </div>
+
+        <form class="demo-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="80ce76b7-3056-423d-beeb-19f425d7576e">
+          <input type="hidden" name="subject" value="CTEM360 Demo Request">
+          <input type="hidden" name="from_name" value="CTEM360 Website">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="demo-name">Full Name *</label>
+              <input type="text" id="demo-name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="demo-email">Work Email *</label>
+              <input type="email" id="demo-email" name="email" placeholder="john@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="demo-company">Company</label>
+              <input type="text" id="demo-company" name="company" placeholder="Your Company">
+            </div>
+            <div class="form-group">
+              <label for="demo-phone">Phone</label>
+              <input type="tel" id="demo-phone" name="phone" placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="demo-message">What are you looking to solve? *</label>
+            <textarea id="demo-message" name="message" rows="4" placeholder="Tell us about your security challenges, team size, and what features interest you most..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            Request Demo
+            <span class="btn-arrow">→</span>
+          </button>
+          <p class="form-disclaimer">By submitting, you agree to our Privacy Policy. We'll never share your data.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span>CTEM<span class="logo-accent">360</span></span>
+          </a>
+          <p>Continuous Threat Exposure Management. See every threat, stop every attack with AI-powered security intelligence.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://github.com/nym33/ctem" class="footer-social-link" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#">Changelog</a>
+          <a href="#">Roadmap</a>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">API Reference</a>
+          <a href="#">Blog</a>
+          <a href="#">Security Advisories</a>
+          <a href="#">Status Page</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+          <a href="#">Partners</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 CTEM360. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
