@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initTestimonialCarousel();
   initSmoothScroll();
+  initDemoForm();
 });
 
 /* ---- Navbar scroll effect ---- */
@@ -187,5 +188,82 @@ function initSmoothScroll() {
         behavior: 'smooth'
       });
     });
+  });
+}
+
+/* ---- Demo form AJAX submission ---- */
+function initDemoForm() {
+  const form = document.querySelector('.demo-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="12" cy="12" r="10" stroke-dasharray="31.4" stroke-dashoffset="10" stroke-linecap="round"/>
+      </svg>
+      Sending...
+    `;
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Replace form with success card
+        form.style.opacity = '0';
+        form.style.transform = 'scale(0.95)';
+
+        setTimeout(() => {
+          form.innerHTML = `
+            <div class="form-success">
+              <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <h3>Demo Request Submitted!</h3>
+              <p>Thank you for your interest in CTEM360. Our team will reach out within 24 hours to schedule your personalized demo.</p>
+              <div class="success-details">
+                <span>✉️ Check your inbox for a confirmation email</span>
+              </div>
+            </div>
+          `;
+          form.style.opacity = '1';
+          form.style.transform = 'scale(1)';
+        }, 300);
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (error) {
+      // Show error inline
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+
+      let errorMsg = form.querySelector('.form-error');
+      if (!errorMsg) {
+        errorMsg = document.createElement('p');
+        errorMsg.className = 'form-error';
+        submitBtn.insertAdjacentElement('afterend', errorMsg);
+      }
+      errorMsg.textContent = 'Something went wrong. Please try again or email us directly.';
+
+      setTimeout(() => {
+        if (errorMsg) errorMsg.remove();
+      }, 5000);
+    }
   });
 }
