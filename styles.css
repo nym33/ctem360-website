@@ -778,6 +778,7 @@ ul, ol {
 .feature-card:nth-child(6)::before { background: linear-gradient(90deg, #d97706, #fbbf24); }
 .feature-card:nth-child(7)::before { background: linear-gradient(90deg, #0891b2, #06b6d4); }
 .feature-card:nth-child(8)::before { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+.feature-card:nth-child(9)::before { background: linear-gradient(90deg, #0d9488, #2dd4bf); }
 
 .feature-card:hover {
   border-color: var(--border-glass-hover);
