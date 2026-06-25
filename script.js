@@ -236,10 +236,7 @@ function initDemoForm() {
                 </svg>
               </div>
               <h3>Demo Request Submitted!</h3>
-              <p>Thank you for your interest in CTEM360. Our team will reach out within 24 hours to schedule your personalized demo.</p>
-              <div class="success-details">
-                <span>✉️ Check your inbox for a confirmation email</span>
-              </div>
+              <p>Thank you for your interest in CTEM360. Our team will reach out to you as soon as possible to schedule your personalized demo.</p>
             </div>
           `;
           form.style.opacity = '1';
