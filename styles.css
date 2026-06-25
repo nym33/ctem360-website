@@ -776,6 +776,8 @@ ul, ol {
 .feature-card:nth-child(4)::before { background: linear-gradient(90deg, #0891b2, #22d3ee); }
 .feature-card:nth-child(5)::before { background: linear-gradient(90deg, #059669, #34d399); }
 .feature-card:nth-child(6)::before { background: linear-gradient(90deg, #d97706, #fbbf24); }
+.feature-card:nth-child(7)::before { background: linear-gradient(90deg, #0891b2, #06b6d4); }
+.feature-card:nth-child(8)::before { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
 
 .feature-card:hover {
   border-color: var(--border-glass-hover);
